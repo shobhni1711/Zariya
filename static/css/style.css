@@ -1,5 +1,5 @@
  
-/* Css For Appway */
+/* Css For TechFuture */
 
 /************ TABLE OF CONTENTS ***************
 1. Fonts
@@ -7,18 +7,18 @@
 3. Global
 4. Main Header/style-one/style-two/style-three/style-four
 5. Main Slider/style-1 _ _ _ _ style-19
-6. Featur Section
+6. Features Section
 7. Video Section
-9. Pricing Section
+9. Instructiond Section
 8. Testimonial Section
 10. Download Section
-11. News Section
+11. Important News Section
 12. Subscribe Section
 14. Main Footer
 15. Clients Section
 16. Inside Sofeware
 19. Innovative Idea
-20. Download Apps
+20. Download images
 21. Application Setup
 22. Optimizatin Application
 23. Subascrive Section
@@ -32,11 +32,11 @@
 31. Fact Counter
 32. Check Website
 33. Free Estimate
-34. Rider Section
-35. Whereyou Section
-36. Ridesharing Section
-37. Ourmission Section
-38. Popular Causes
+34. Reader Section
+35. Emergency Section
+36. Messagesharing Section
+37. Our initiative Section
+38. Motivational stories
 39. Social Fundraising
 40. Campaing Section
 41. Donate
@@ -44,12 +44,12 @@
 43. Make Difference
 44. Service Section
 45. Management Section
-46. Recruitment Section
+46. Volunteer Section
 47. Project Inquiry
-48. Industries Service
+48. our Service
 49. Video Section
 50. Solve Problem
-51. Marketing Benefits
+51.  Benefits
 52. Check Works
 53. Testimonial Page
 54. Streamline Section
@@ -1311,7 +1311,7 @@ div#mCSB_1_container{
 
 
 
-/** news-section **/
+/** gesture to audio-section **/
 
 .news-section{
   position: relative;
@@ -1562,7 +1562,7 @@ div#mCSB_1_container{
 
 .feature-style-ten{
   position: relative;
-  padding: 135px 0px 95px 0px;
+  padding: 135px 0px 25px 0px;
 }
 
 .feature-style-ten .sec-title{
@@ -1604,7 +1604,7 @@ div#mCSB_1_container{
 
 #content_block_29 .content-box{
   position: relative;
-  padding: 105px 0px 119px 0px;
+  padding: 55px 0px 79px 0px;
 }
 
 .feature-style-ten .inner-container .inner-box:first-child .content-box{
@@ -1923,4 +1923,5 @@ div#mCSB_1_container{
   background: #fff;
   color: #4527a4;
 }
+
 

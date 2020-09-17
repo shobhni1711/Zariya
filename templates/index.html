@@ -38,6 +38,47 @@
         border-radius: 10px;
         background: rgba(255, 255, 255, 0.1);
       }
+
+      /* Modal CSS--*/
+<!-- Modal -->
+
+#myModal--effect-zoomIn.modal.fade .modal-dialog {
+   -webkit-transform: scale(0.1);
+   -moz-transform: scale(0.1);
+   -ms-transform: scale(0.1);
+   transform: scale(0.1);
+   top: 180px;
+   opacity: 0;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+#myModal--effect-zoomIn.modal.fade.in .modal-dialog {
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -webkit-transform: translate3d(0, -120px, 0);
+   transform: translate3d(0, -120px, 0);
+   opacity: 1;
+}
+
+/*modal-effect-pulse*/
+
+#myModal--effect-pulse.modal.fade .modal-dialog {
+   transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+   opacity: 0;
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+#myModal--effect-pulse.modal.fade.in .modal-dialog {
+   transform: perspective(400px) scale3d(.95, .95, .95);
+   animation-timing-function: ease-in;
+   opacity: 1;
+}
     </style>
   </head>
 
@@ -86,6 +127,22 @@
       });
     }
 
+    function Mycamera() {
+      $.ajax({
+        url: "/camera",
+        type: "GET",
+      }).done(function (response) {
+        var html = "";
+        response = response.result;
+        $.each(response, function (key, val) {
+          console.log(val);
+          html += val + " ";
+        });
+
+        $("#text2").html(html);
+      });
+    }
+
     function mySearch() {
       var a = document.getElementById("text2").value;
       console.log("a " + a);
@@ -102,7 +159,9 @@
           <div class="main-box clearfix">
             <div class="logo-box pull-left">
               <figure class="logo">
-                <a href="index.html"><img src="images/logo-4.png" alt="" /></a>
+                <a href="index.html"
+                  ><img src="../static/images/resource/zariya3.png" alt=""
+                /></a>
               </figure>
             </div>
             <div class="menu-area pull-right clearfix">
@@ -138,7 +197,9 @@
       <div class="sticky-header">
         <div class="container clearfix">
           <figure class="logo-box">
-            <a href="index.html"><img src="images/small-logo.png" alt="" /></a>
+            <a href="index.html"
+              ><img src="../static/images/resource/zariya3.png" alt=""
+            /></a>
           </figure>
           <div class="menu-area">
             <nav class="main-menu clearfix">
@@ -157,7 +218,9 @@
 
       <nav class="menu-box">
         <div class="nav-logo">
-          <a href="index.html"><img src="images/logo.png" alt="" title="" /></a>
+          <a href="index.html"
+            ><img src="../static/images/resource/zariya3.png" alt="" title=""
+          /></a>
         </div>
         <div class="menu-outer">
           <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
@@ -193,7 +256,7 @@
     </div>
     <!-- End Mobile Menu -->
     <br /><br /><br /><br />
-    <!-- news-section -->
+    <!-- Gesture to Audio-section -->
     <section class="news-section">
       <div class="container">
         <div class="sec-title center">
@@ -208,13 +271,13 @@
             >
               <div class="inner-box">
                 <div class="btn-box">
-                  <a href="#" class="theme-btn"
+                  <a class="theme-btn" onclick="Mycamera()"
                     >Camera<i class="fas fa-camera"></i
                   ></a>
                 </div>
                 <br />
                 <div class="btn-box">
-                  <a class="theme-btn" onclick="myKey()"
+                  <a class="theme-btn"  data-toggle="modal" data-target="#myModal--effect-zoomIn"
                     >Keyboard<i class="fas fa-keyboard"></i
                   ></a>
                 </div>
@@ -247,7 +310,7 @@
               <div class="inner-box">
                 <div class="btn-box">
                   <a class="theme-btn" onclick="myAudio()"
-                    >Listen<i class="fas fa-voice"></i
+                    >Listen<i class="fas fa-play-circle"></i
                   ></a>
                 </div>
                 <br />
@@ -262,9 +325,9 @@
         </div>
       </div>
     </section>
-    <!-- news-section end -->
+    <!-- Gesture to Audio section end -->
 
-    <!-- news-section -->
+    <!-- new Audio To Gesture-section -->
     <section class="news-section">
       <div class="container">
         <div class="sec-title center">
@@ -319,13 +382,30 @@
         </div>
       </div>
     </section>
-    <!-- news-section end -->
+    <!-- Audio To Gesture section end -->
 
     <!--Scroll to top-->
     <button class="scroll-top scroll-to-target" data-target="html">
       <span class="fa fa-arrow-up"></span>
     </button>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal--effect-zoomIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="myModalLabel">SIGN KEYBOARD -- Coming Soon!!</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+            </div>
+            <div class="modal-body">
+               <img style="width: 800px !important; height: 150%" src="../static/images/resource/keyboard.png" alt="" />
+            </div>
+            
+         </div>
+      </div>
+   </div>
     <!-- jequery plugins -->
     <script src="../static/js/jquery.js"></script>
     <script src="../static/js/popper.min.js"></script>

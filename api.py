@@ -1,7 +1,7 @@
 from flask import Flask, request, render_template,jsonify
 import audtoges
 import textaud
-
+import main
 app = Flask(__name__)
 
 
@@ -46,7 +46,14 @@ def listen():
     result = {str(key): value for key, value in result.items()}
     return jsonify(result=result)
 
-
+@app.route('/camera', methods=['GET','POST'])
+def camera():
+    combine = main.Video()
+    result = {
+        "output": combine
+    }
+    result = {str(key): value for key, value in result.items()}
+    return jsonify(result=result)
 
 # audio fxn for p1
 @app.route('/audio', methods=['GET','POST'])

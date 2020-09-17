@@ -53,7 +53,7 @@ def ges(a):
                 img = mpimg.imread(loc)
                 plt.imshow(img)
                 plt.draw()
-                plt.pause(0.5) 
+                plt.pause(0.8) 
                                        
 
         plt.close()
