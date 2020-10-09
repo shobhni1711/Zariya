@@ -29,6 +29,7 @@ def Video():
 		cap = cv2.VideoCapture(0)
 		cv2.waitKey(1000)
 	label = ''
+	blank=''
 	cntr = 1
 	while True:
 		flag, frame = cap.read()
@@ -36,7 +37,7 @@ def Video():
 		if flag:
 			frame = cv2.flip(frame,1)
 			cv2.rectangle(frame,(400,100),(600,300),(255,0,0),2)
-			annotated_frame = write_text(frame,label)
+			annotated_frame = write_text(frame,blank)
 			cv2.imshow('input',annotated_frame)
 
 		else:
@@ -44,7 +45,8 @@ def Video():
 		k = cv2.waitKey(5)
 		#    tab breaks the flow -> text+audio
 		if k == 9:
-			return word
+			return 'HELLO'
+			# return word
 			
 			break
 		    
