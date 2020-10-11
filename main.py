@@ -44,15 +44,12 @@ def Video():
 			cv2.waitKey(1000)
 		k = cv2.waitKey(5)
 		#    tab breaks the flow -> text+audio
-		if k == 9:
-			return 'HELLO'
-			# return word
-			
+		if k == 27:
+			return word
 			break
 		    
-		elif k == 27:
+		elif k == 9:
 			label = predict_label_svm(frame[100:300,400:600])
-			# print(label)
 			word=word+label
 
 		elif k == ord('s'):

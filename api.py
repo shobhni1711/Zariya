@@ -18,6 +18,10 @@ def index():
 def about():
     return render_template('about.html')
 
+@app.route('/Entertainment.html')
+def entertainment():
+    return render_template('Entertainment.html')
+
 @app.route('/feedback.html')
 def feedback():
     return render_template('feedback.html')
