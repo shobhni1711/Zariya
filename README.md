@@ -26,7 +26,6 @@ Project is created with:
 
 #### ![alt text](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00500-020-04860-5/MediaObjects/500_2020_4860_Fig7_HTML.png)
 
-## Interface
-#### Input Feature
-#### ![alt text](https://drive.google.com/file/d/1oKb0zKf0V-Se4m3ftbB3TG_zMdKcVahu/view)
+## Run app.py
+
 
