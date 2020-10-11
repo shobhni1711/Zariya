@@ -26,6 +26,6 @@ Project is created with:
 
 #### ![alt text](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00500-020-04860-5/MediaObjects/500_2020_4860_Fig7_HTML.png)
 
-## Run app.py
+## Run api.py
 
 
